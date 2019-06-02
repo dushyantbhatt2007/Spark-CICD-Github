@@ -14,3 +14,10 @@ jdk:
 
 scala:
   - 2.12.4
+
+script:
+  - mvn test
+
+notifications:
+  email:
+    - dushyant.it2007@gmail.com
