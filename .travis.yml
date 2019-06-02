@@ -1,0 +1,16 @@
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.m2/repository # maven
+    - $HOME/.ivy2/cache # sbt
+    - $HOME/.sbt/launchers # sbt
+    - $HOME/.coursier/cache # sbt + coursier
+
+language: scala
+
+jdk:
+  - oraclejdk8
+
+scala:
+  - 2.12.4
