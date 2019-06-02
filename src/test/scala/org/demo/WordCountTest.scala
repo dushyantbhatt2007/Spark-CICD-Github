@@ -11,7 +11,7 @@ class WordCountTest extends FlatSpec with Matchers with SparkSessionSetup {
       val wc = new WordCount(sparkSession)
       val result = wc.countWords(df)
       result.filter($"value" === "abc").first().getLong(1) should be(2)
-      result.filter($"value" === "klm").first().getLong(1) should be(2)
+      result.filter($"value" === "klm").first().getLong(1) should be(1)
   }
 }
 
