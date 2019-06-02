@@ -15,12 +15,8 @@ jdk:
 scala:
   - 2.11.8
 
-install:
-  - pip install --user codecov
-
 script:
   - mvn test
-  - sbt test
 
 notifications:
   email:
