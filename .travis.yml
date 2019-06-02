@@ -19,7 +19,8 @@ install:
   - pip install --user codecov
 
 script:
-  - sbt clean test
+  - mvn test
+  - sbt test
 
 notifications:
   email:
