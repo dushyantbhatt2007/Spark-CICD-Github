@@ -15,8 +15,14 @@ jdk:
 scala:
   - 2.11.8
 
+install:
+  - pip install --user codecov
+
 script:
-  - mvn ++$TRAVIS_SCALA_VERSION coverage test coverageReport
+  - mvn coverage test coverageReport
+
+after_success:
+  - codecov
 
 notifications:
   email:
