@@ -19,10 +19,7 @@ install:
   - pip install --user codecov
 
 script:
-  - mvn coverage test coverageReport
-
-after_success:
-  - codecov
+  - sbt clean test
 
 notifications:
   email:
