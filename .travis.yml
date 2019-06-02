@@ -13,10 +13,10 @@ jdk:
   - oraclejdk8
 
 scala:
-  - 2.12.4
+  - 2.11.8
 
 script:
-  - mvn test
+  - mvn ++$TRAVIS_SCALA_VERSION coverage test coverageReport
 
 notifications:
   email:
